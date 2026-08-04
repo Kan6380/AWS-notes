@@ -4,7 +4,7 @@
 **CloudWatch** is AWS's native monitoring and observability service — collects metrics, logs, and lets you set alarms that trigger actions (notifications, auto scaling, etc.).
 
 ## Why it matters
-Almost every AWS service integrates with CloudWatch automatically. It's the default answer for "how do I know if something's wrong" across the entire platform — conceptually the AWS-native equivalent of the Loki + Grafana stack you've already set up on your homelab.
+Almost every AWS service integrates with CloudWatch automatically. It's the default answer for "how do I know if something's wrong" across the entire platform — conceptually the AWS-native equivalent of a Loki + Grafana observability stack 
 
 ## Key concepts
 
@@ -49,4 +49,5 @@ aws logs tail /aws/lambda/my-function --follow
 - CloudWatch Alarms can trigger Auto Scaling actions, SNS notifications, or Lambda functions — a common exam scenario chains these together (e.g., "alert on high error rate AND auto-remediate via Lambda")
 
 ## My notes / things that confused me
-_(fill in as you go — good place to note the parallels/differences with your Grafana Explore workflow that caught the Postgres readiness probe bug)_
+good place to note the parallels/differences with your Grafana Explore workflow that caught the Postgres readiness probe bug"
+After: "good place to note parallels with any Grafana/Loki debugging workflow you've used
