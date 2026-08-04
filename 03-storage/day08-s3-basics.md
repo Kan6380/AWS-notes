@@ -43,4 +43,14 @@ aws s3 rb s3://your-unique-bucket-name-2026
 - Bucket names must be lowercase, no underscores, DNS-compliant
 
 ## My notes / things that confused me
-_(fill in as you go)_
+403 vs 404 confusion
+403 vs 404 — I assumed any error meant "broken"
+
+At first I didn't distinguish between these — both just felt like "something's wrong." Now I get that they mean completely different things:
+
+403 Forbidden = the file exists, but I'm not allowed to see it (permissions problem — bucket policy, Block Public Access)
+404 Not Found = AWS genuinely can't find the file (wrong key, never uploaded, wrong index document)
+
+This matters because they need totally different fixes — chasing a permissions fix for a 404 (or vice versa) wastes time.
+
+
