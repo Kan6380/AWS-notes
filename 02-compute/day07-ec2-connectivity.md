@@ -50,4 +50,14 @@ aws ec2 release-address --allocation-id eipalloc-xxxxxxxx
 - EIPs are tied to a Region — can't move one across regions directly
 
 ## My notes / things that confused me
-_(fill in as you go)_
+
+Elastic IP charges
+
+Elastic IP — I thought it was just a free static IP
+
+I assumed once AWS gives you an Elastic IP, it's yours and free, since it's "just an IP address." Turns out:
+
+An EIP is free only while it's attached to a running instance
+The moment you stop the instance, or don't attach the EIP to anything at all, AWS starts charging for it hourly
+
+This actually makes sense once I thought about it — AWS has a limited pool of public IPv4 addresses, so they charge for ones sitting idle to discourage people from hoarding addresses they're not using. Still caught me off guard the first time.
