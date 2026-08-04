@@ -4,7 +4,7 @@
 **RDS (Relational Database Service)** is AWS's managed relational database service — supports MySQL, PostgreSQL, MariaDB, SQL Server, Oracle. AWS handles patching, backups, and infrastructure so you just use the database.
 
 ## Why it matters
-Managing your own database server (patching, backups, failover) is time-consuming and error-prone. RDS automates the operational overhead — directly relevant to your FastAPI + Postgres homelab project, which could eventually migrate from self-hosted Postgres to RDS.
+Managing your own database server — patching, backups, failover, scaling — is time-consuming and error-prone, especially as an application grows. RDS automates that operational overhead entirely, letting you focus on your application instead of database maintenance. This is especially valuable for teams running production workloads where downtime or a missed backup could mean real consequences.
 
 ## Key concepts
 
