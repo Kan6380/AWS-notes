@@ -51,4 +51,9 @@ aws ec2 create-nat-gateway --subnet-id subnet-xxxxxxxx --allocation-id eipalloc-
 - NAT Instance (older, EC2-based alternative) vs NAT Gateway (managed, AWS-preferred) — NAT Gateway is almost always the better/tested answer now
 
 ## My notes / things that confused me
-_(fill in as you go)_
+
+NAT Gateway isn't free like IGW
+
+I assumed NAT Gateway was free, same as Internet Gateway
+
+Internet Gateway has no hourly charge — so I assumed NAT Gateway worked the same way since they sound related. Actually NAT Gateway charges per hour it exists, plus per GB of data processed through it — can add up fast if you're not paying attention, especially if you spin one up per AZ for high availability (which is the recommended practice).
