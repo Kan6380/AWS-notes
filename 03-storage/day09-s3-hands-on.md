@@ -53,4 +53,8 @@ http://my-static-site-2026.s3-website-eu-west-1.amazonaws.com
 - S3 website endpoints are HTTP only — for HTTPS, you'd put CloudFront in front of the bucket
 
 ## My notes / things that confused me
-_(fill in as you go — good place for a screenshot of your live site)_
+Block Public Access overriding policy
+
+I added a bucket policy for public access... and still got 403
+
+Confusing at first — I wrote a policy that clearly said "allow public read," but access was still denied. Turns out Block Public Access is a separate setting that overrides the bucket policy entirely, regardless of what the policy says. It's AWS's safety net — even a "correct" policy gets ignored if this toggle is still on. Had to manually turn it off before the policy actually took effect.
