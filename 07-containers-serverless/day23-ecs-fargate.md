@@ -4,9 +4,7 @@
 **ECS (Elastic Container Service)** is AWS's own container orchestration service — runs and manages Docker containers. **Fargate** is a serverless compute option for ECS, meaning you don't manage the underlying EC2 instances at all.
 
 ## Why it matters
-Given your homelab already runs Kubernetes (self-managed), understanding ECS/Fargate gives you the AWS-native alternative — useful context for interviews comparing "why Kubernetes vs ECS."
-
-## Key concepts
+If you already have Kubernetes experience, understanding ECS/Fargate gives you the AWS-native alternative — useful context for interviews comparing 'why Kubernetes vs ECS.
 
 ### ECS Launch Types
 
@@ -56,4 +54,3 @@ aws ecs create-service \
 - "Run containers without managing servers" → Fargate is almost always the intended answer
 
 ## My notes / things that confused me
-_(fill in as you go — worth comparing directly against your own kubeadm/Flannel homelab setup for a strong interview talking point)_
