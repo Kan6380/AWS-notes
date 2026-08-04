@@ -18,7 +18,7 @@ A collection of users sharing the same permissions — attach a policy once to a
 A set of permissions that can be **temporarily assumed** — by a user, an AWS service (EC2, Lambda), or an external federated identity (SAML/OIDC). Issues short-lived, auto-expiring credentials via STS — safer than permanent credentials.
 
 ### Policies
-JSON documents defining permissions — a list of statements, each specifying:
+A policy is a JSON document made up of a list of statements — each statement defines whether a specific action on a specific AWS resource is allowed or denied.
 - **Effect**: Allow or Deny
 - **Action**: the API operation (e.g., `s3:GetObject`)
 - **Resource**: which AWS resource it applies to
