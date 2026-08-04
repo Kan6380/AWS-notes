@@ -51,4 +51,4 @@ aws ec2 associate-iam-instance-profile \
 - `AssumeRole` API call is central to how roles actually get "activated" — worth remembering the name for exam questions
 
 ## My notes / things that confused me
-_(fill in as you go — this maps closely to Azure AD PIM concepts you already know: temporary elevated access instead of standing permissions)_
+_(fill in as you go — if you're coming from an Azure background, this maps closely to Azure AD PIM: temporary elevated access instead of standing permissions"
