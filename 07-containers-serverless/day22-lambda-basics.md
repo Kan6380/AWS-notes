@@ -49,4 +49,4 @@ aws lambda add-permission \
 - "Event-driven, no servers, pay-per-execution" in a question almost always points to Lambda
 
 ## My notes / things that confused me
-_(fill in as you go — this connects to your earlier KodeKloud Lambda labs: S3-trigger pipelines, DynamoDB logging, KMS encryption with the raw binary `base64 -d` fix)_
+a common gotcha worth knowing: when working with KMS-encrypted Lambda payloads, remember to decode with raw binary (base64 -d) rather than text mode, or you'll corrupt the encrypted data
