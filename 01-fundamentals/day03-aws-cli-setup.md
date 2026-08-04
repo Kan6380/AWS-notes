@@ -57,7 +57,7 @@ aws s3 ls --profile myproject
 ```
 
 ## Common exam gotchas
-- Never hardcode Access Keys into scripts or commit them to Git — this is a huge security anti-pattern (relevant to your earlier `git filter-repo`/BFG secret remediation notes)
+- Never hardcode Access Keys into scripts or commit them to Git — this is a huge security anti-pattern. If a key ever does get committed, tools like git filter-repo or BFG Repo-Cleaner can help scrub it from history, but rotating the leaked key immediately is the real fix.
 - Long-lived Access Keys are discouraged in modern best practice — prefer IAM Roles + temporary credentials (via STS) where possible, especially for CI/CD (ties into the OIDC federation topic later)
 - `aws configure` credentials are stored in plaintext at `~/.aws/credentials` — fine for local dev, not something to share or commit
 
