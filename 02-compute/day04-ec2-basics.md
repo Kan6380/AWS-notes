@@ -51,4 +51,25 @@ aws ec2 terminate-instances --instance-ids i-0123456789abcdef0
 - **Instance Store vs EBS** — Instance Store is physically attached, ephemeral (data lost on stop/terminate); EBS is network-attached, persistent
 
 ## My notes / things that confused me
-_(fill in as you go)_
+Here's that written up for your "My notes / things that confused me" section in `02-compute/ec2-basics.md`:
+
+---
+
+## My notes / things that confused me
+
+**Stopped vs. still being charged**
+
+At first I assumed stopping an EC2 instance meant I wouldn't be charged at all — like turning off a light switch. Turns out that's only half true.
+
+- **Compute charges stop** — you're no longer billed for the EC2 instance itself once it's stopped
+- **Storage charges continue** — the EBS volume attached to that instance (your root volume + any additional volumes) keeps existing on disk, and AWS keeps billing for that storage even while the instance is off
+
+So "stopped" really means *"the compute is off, but your disk is still sitting there costing money."* The only way to fully stop being charged is to either:
+1. **Terminate** the instance (deletes it, and by default deletes the root EBS volume too — unless "Delete on Termination" is unchecked)
+2. Or manually delete the EBS volume separately after stopping
+
+**Why this actually matters**
+
+This is a common real-world "surprise bill" trap — someone stops a bunch of instances thinking they've cut costs to zero, then finds unexpected charges on their statement weeks later because the storage never actually went anywhere. Worth remembering as a genuine gotcha, not just an exam fact.
+
+---
