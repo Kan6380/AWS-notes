@@ -8,7 +8,7 @@ Three components that together create a scalable, self-healing, load-balanced ap
 - **Launch Template** — defines what a new instance looks like when ASG creates one
 
 ## Why it matters
-This trio is the classic AWS pattern for running a resilient, scalable web application — conceptually similar to what a Kubernetes Deployment + Service + HPA (Horizontal Pod Autoscaler) achieves in your homelab, just at the EC2/VM level instead of the Pod level.
+This trio is the classic AWS pattern for running a resilient, scalable web application — conceptually similar to what a Kubernetes Deployment + Service + HPA (Horizontal Pod Autoscaler) achieves, just at the EC2/VM level instead of the Pod level
 
 ## Key concepts
 
@@ -62,4 +62,5 @@ aws elbv2 create-load-balancer \
 - Scaling policies react to CloudWatch metrics — ASG itself doesn't "decide" to scale without a metric/alarm tied to it
 
 ## My notes / things that confused me
-_(fill in as you go — a good comparison point to your own Kubernetes rollout/HPA experience)_
+
+good comparison point if you've worked with Kubernetes rollouts or HPA before
