@@ -4,7 +4,7 @@
 Two approaches to CI/CD when working with AWS: AWS's own native CI/CD services, or an external tool (like GitHub Actions, which you already use) authenticating securely to AWS.
 
 ## Why it matters
-This ties together your existing GitHub Actions pipeline (test → build-and-push → deploy) with how it would securely interact with AWS resources, without needing a full switch to AWS-native tooling.
+ties together a typical GitHub Actions pipeline (test → build-and-push → deploy) with how it would securely interact with AWS resources
 
 ## Key concepts
 
@@ -67,4 +67,4 @@ docker push <account-id>.dkr.ecr.eu-west-1.amazonaws.com/my-app:latest
 - ECR (Elastic Container Registry) is AWS's Docker registry — equivalent role to your current Docker Hub usage, just AWS-native
 
 ## My notes / things that confused me
-_(fill in as you go — this is a natural extension of your existing GitHub Actions pipeline once/if you deploy to AWS instead of just your homelab)_
+natural next step for anyone running GitHub Actions who wants to deploy to AWS instead of a self-hosted environment
