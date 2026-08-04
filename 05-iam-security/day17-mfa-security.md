@@ -51,4 +51,4 @@ Example IAM policy condition requiring MFA:
 - Enforcing MFA via IAM policy condition (`aws:MultiFactorAuthPresent`) is a common real exam scenario for "require MFA before allowing sensitive actions"
 
 ## My notes / things that confused me
-_(fill in as you go — this maps directly to Azure Conditional Access requiring MFA, which you already know well)_
+this maps directly to Azure Conditional Access policies requiring MFA, if you're familiar with that side of identity management
