@@ -4,7 +4,8 @@
 **CloudFormation** is AWS's native Infrastructure as Code (IaC) service — you describe your desired AWS resources in a YAML or JSON template, and CloudFormation creates, updates, or deletes them for you, tracking everything as a single **Stack**.
 
 ## Why it matters
-Manually clicking through the Console to create resources isn't repeatable or version-controllable. IaC lets you treat infrastructure like code — reviewable, versioned in Git, and consistently reproducible. This is conceptually the AWS-native counterpart to Terraform, which you've identified as your next big skills gap.
+Manually clicking through the Console to create resources isn't repeatable or version-controllable. IaC lets you treat infrastructure like code — reviewable, versioned in Git, and consistently reproducible. 
+This is conceptually the AWS-native counterpart to Terraform — worth comparing the two if you're deciding which IaC tool to learn.
 
 ## Key concepts
 
@@ -55,4 +56,4 @@ aws cloudformation delete-stack --stack-name my-stack
 - Rollback on failure is automatic by default — if part of a stack update fails, CloudFormation rolls back to the last known good state
 
 ## My notes / things that confused me
-_(fill in as you go — good place to note direct comparisons to your Terraform learning once you start that, since the declarative IaC mental model transfers)_
+good place to note direct comparisons once you start learning Terraform
