@@ -1,8 +1,7 @@
 # Day 9 — Creating a Bucket, Uploading Files, Static Website Hosting
 
 ## What it is
-Hands-on walkthrough of turning an S3 bucket into a live static website — useful for hosting a React/Vite `dist/` build, exactly like the frontend of your task-tracker project.
-
+Hands-on walkthrough of turning an S3 bucket into a live static website — useful for hosting any React/Vite dist/ build or similar static frontend
 ## Why it matters
 Static website hosting on S3 is one of the cheapest, simplest ways to serve a frontend — no servers to manage at all.
 
