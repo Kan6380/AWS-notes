@@ -4,13 +4,13 @@
 **EKS (Elastic Kubernetes Service)** is AWS's managed Kubernetes offering — AWS runs and manages the Kubernetes **control plane** (API server, etcd, scheduler) for you, while you manage the worker nodes (or use Fargate for fully serverless nodes too).
 
 ## Why it matters
-Since your homelab already runs a self-managed 3-node kubeadm cluster, EKS is the natural "what would this look like in production on AWS" comparison — a strong, genuine talking point for interviews.
+If you've run a self-managed Kubernetes cluster (e.g., via kubeadm), EKS is the natural 'what would this look like in production on AWS' comparison — useful context whether you're studying for certification or prepping for interviews.
 
 ## Key concepts
 
 ### What AWS manages vs what you manage
 
-| | Self-managed K8s (your homelab) | EKS |
+| | Self-managed K8s (e.g., kubeadm) | EKS |
 |---|---|---|
 | Control plane (API server, etcd, scheduler) | You manage (kubeadm) | AWS manages, highly available across AZs |
 | Worker nodes | You manage (your 3 VMs) | You manage (EC2) OR fully serverless (Fargate) |
@@ -21,7 +21,7 @@ Since your homelab already runs a self-managed 3-node kubeadm cluster, EKS is th
 - **EKS Cluster** — the managed control plane
 - **Node Group** — a group of EC2 instances (managed or self-managed) that join as worker nodes
 - **Fargate Profile** — run pods on Fargate instead of EC2 nodes (no node management at all)
-- **VPC CNI** — EKS's default networking plugin, gives each Pod a real IP address from the VPC's CIDR range (different from your Flannel overlay network approach)
+- **VPC CNI** — EKS's default networking plugin, gives each Pod a real IP address from the VPC's CIDR range (different from overlay-network CNIs like Flannel, commonly used in self-managed clusters)
 
 ## Hands-on / commands
 
@@ -42,4 +42,4 @@ kubectl get nodes
 - "Managed Kubernetes with less operational overhead than self-hosting" → EKS is the answer
 
 ## My notes / things that confused me
-_(fill in as you go — genuinely worth documenting the side-by-side differences from your own kubeadm cluster here, since you have real hands-on comparison material most candidates don't)_
+
