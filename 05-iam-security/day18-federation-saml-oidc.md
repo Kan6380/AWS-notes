@@ -57,7 +57,7 @@ Example trust policy for a GitHub Actions OIDC role (restricts to a specific rep
       "Action": "sts:AssumeRoleWithWebIdentity",
       "Condition": {
         "StringEquals": {
-          "token.actions.githubusercontent.com:sub": "repo:Kan6380/task-tracker-3tier-devops:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub": "repo:your-org/your-repo-name:ref:refs/heads/main"
         }
       }
     }
@@ -71,4 +71,4 @@ Example trust policy for a GitHub Actions OIDC role (restricts to a specific rep
 - GitHub Actions + OIDC is a modern best practice replacing storing AWS access keys as GitHub Secrets — worth remembering for real-world CI/CD security, even though it's less exam-core
 
 ## My notes / things that confused me
-_(fill in as you go — this connects directly to your Azure AD Connect / duplicate-user incident story: same underlying trust relationship concept, different direction)_
+- this same trust-relationship model shows up constantly in enterprise identity work — worth understanding deeply if you come from an IAM/identity background
