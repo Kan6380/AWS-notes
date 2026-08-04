@@ -48,4 +48,4 @@ aws rds create-db-instance-read-replica \
 - "Reduce read load on primary database" → Read Replica. "Ensure automatic failover during an AZ outage" → Multi-AZ. These get mixed up constantly on the exam
 
 ## My notes / things that confused me
-_(fill in as you go — good place to note anything from your own Postgres readiness-probe debugging experience on the homelab)_
+good place to note any real debugging experience you've had with database health checks or readiness probes
